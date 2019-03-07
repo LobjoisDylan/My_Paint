@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <title>My paint</title>
+</head>
+<body>
+  <canvas id="canvas" width="1000" height="350">
+    <i class="fas fa-pencil-alt"></i>
+  </canvas>
+  <div class="icone">
+    <img src="picture/pencil.png" class="pencil" alt="pencil">
+    <img src="picture/line.png" class="line" alt="line">
+    <img src="picture/rectangle.png" class="square" alt="square">
+    <img src="picture/rectangle_black.png" class="square_black" alt="square_black">
+    <img src="picture/circle.png" class="circle" alt="circle">
+    <img src="picture/circle_black.png" class="circle_black" alt="circle_black">
+    <img src="picture/triangle.png" class="triangle" alt="triangle">
+    <img src="picture/triangle_black.png" class="triangle_black" alt="triangle_black">
+    <img src="picture/eraser.png" class="eraser" alt="eraser">
+    <select id="epaisseur">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <input type="color" value="#000000" id="couleur">
+    <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Télécharger</a>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </div>
+  <script>
+
+  $(document).ready(function(){
+    $(function(){
+      $("#canvas").my_paint();
+    });
+  });
+  </script>
+</body>
+</html>
